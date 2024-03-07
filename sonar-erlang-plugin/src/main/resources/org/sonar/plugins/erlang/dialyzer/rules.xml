@@ -353,7 +353,8 @@
       <![CDATA[opaque_guard]]>
     </description>
     <messages>
-      <message>Guard test ~w~s breaks the opaqueness of its argument</message>
+      <message>Guard test ~w~s breaks the opacity of its argument</message>
+      <message>Guard test ~s ~s ~s contains ~s</message>
     </messages>
   </rule>
   <rule>
@@ -464,6 +465,105 @@
     </description>
     <messages>
       <message>Callback info about the ~w behaviour is not available</message>
+    </messages>
+  </rule>
+  <rule>
+    <key>D043</key>
+    <name><![CDATA[map_update]]></name>
+    <internalKey>map_update</internalKey>
+    <description>
+      <![CDATA[map_update]]>
+    </description>
+    <messages>
+      <message>A key of type ~s cannot exist in a map of type ~s</message>
+    </messages>
+  </rule>
+  <rule>
+    <key>D044</key>
+    <name><![CDATA[contract_with_opaque]]></name>
+    <internalKey>contract_with_opaque</internalKey>
+    <description>
+      <![CDATA[contract_with_opaque]]>
+    </description>
+    <messages>
+      <message>The specification for ~w:~w/~w has an opaque subtype ~s which is violated by the success typing ~s</message>
+    </messages>
+  </rule>
+  <rule>
+    <key>D045</key>
+    <name><![CDATA[missing_range]]></name>
+    <internalKey>missing_range</internalKey>
+    <description>
+      <![CDATA[missing_range]]>
+    </description>
+    <messages>
+      <message>The success typing for ~w:~w/~w implies that the function might also return ~s but the specification return is ~s</message>
+    </messages>
+  </rule>
+  <rule>
+    <key>D046</key>
+    <name><![CDATA[opaque_size]]></name>
+    <internalKey>opaque_size</internalKey>
+    <description>
+      <![CDATA[opaque_size]]>
+    </description>
+    <messages>
+      <message>The size ~s breaks the opacity of ~s</message>
+    </messages>
+  </rule>
+  <rule>
+    <key>D047</key>
+    <name><![CDATA[opaque_call]]></name>
+    <internalKey>opaque_call</internalKey>
+    <description>
+      <![CDATA[opaque_call]]>
+    </description>
+    <messages>
+      <message>The call ~s:~s~s breaks the opacity of the term ~s :: ~s</message>
+    </messages>
+  </rule>
+  <rule>
+    <key>D048</key>
+    <name><![CDATA[callback_not_exported]]></name>
+    <internalKey>callback_not_exported</internalKey>
+    <description>
+      <![CDATA[callback_not_exported]]>
+    </description>
+    <messages>
+      <message>Callback function ~w/~w exists but is not exported (behaviour ~w)</message>
+    </messages>
+  </rule>
+  <rule>
+    <key>D049</key>
+    <name><![CDATA[unknown_type]]></name>
+    <internalKey>unknown_type</internalKey>
+    <description>
+      <![CDATA[unknown_type]]>
+    </description>
+    <messages>
+      <message>Unknown type ~w:~w/~w</message>
+    </messages>
+  </rule>
+  <rule>
+    <key>D050</key>
+    <name><![CDATA[unknown_function]]></name>
+    <internalKey>unknown_function</internalKey>
+    <description>
+      <![CDATA[unknown_function]]>
+    </description>
+    <messages>
+      <message>Unknown function ~w:~w/~w</message>
+    </messages>
+  </rule>
+  <rule>
+    <key>D051</key>
+    <name><![CDATA[unknown_behaviour]]></name>
+    <internalKey>unknown_behaviour</internalKey>
+    <description>
+      <![CDATA[unknown_behaviour]]>
+    </description>
+    <messages>
+      <message>Unknown behaviour ~w</message>
     </messages>
   </rule>
 </rules>
