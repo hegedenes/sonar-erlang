@@ -39,7 +39,7 @@ public class ErlangQualityProfileTest {
 
     assertThat(profile.language()).isEqualTo("erlang");
     assertThat(profile.name()).isEqualTo("Sonar way");
-    assertThat(profile.rules().size()).isEqualTo(100);
+    assertThat(profile.rules().size()).isEqualTo(109);
   }
 
 }

@@ -43,7 +43,7 @@ public class DialyzerRuleDefinitionTest {
 
     List<RulesDefinition.Rule> rules = repository.rules();
 
-    assertThat(rules.size()).isEqualTo(41);
+    assertThat(rules.size()).isEqualTo(50);
   }
 
 }
