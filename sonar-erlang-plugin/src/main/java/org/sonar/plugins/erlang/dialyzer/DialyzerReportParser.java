@@ -103,9 +103,16 @@ public class DialyzerReportParser {
         ActiveRule rule = context.activeRules().find(ruleKey);
         if (rule != null) {
 
-          String filePattern = "**/" + FilenameUtils.getName(fileName);
+          String filePattern = "**/" + fileName;
           InputFile inputFile = context.fileSystem().inputFile(
               context.fileSystem().predicates().matchesPathPattern(filePattern));
+
+          if (inputFile == null) {
+            filePattern = "**/" + FilenameUtils.getName(fileName);
+            inputFile = context.fileSystem().inputFile(
+                    context.fileSystem().predicates().matchesPathPattern(filePattern));
+          }
+
           if (inputFile != null) {
             NewIssue issue = getNewIssue(lineNumber, comment, ruleKey, inputFile);
             issue.save();
