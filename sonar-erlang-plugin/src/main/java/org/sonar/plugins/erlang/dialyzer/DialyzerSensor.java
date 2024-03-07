@@ -33,6 +33,8 @@ import org.sonar.plugins.erlang.xml.XmlRuleManager;
  */
 public class DialyzerSensor implements Sensor {
 
+  private static final String ELIXIR_LANGUAGE_KEY = "elixir";
+
   private final XmlRuleManager dialyzerRuleManager;
 
   public DialyzerSensor() {
@@ -47,8 +49,8 @@ public class DialyzerSensor implements Sensor {
   @Override
   public void describe(SensorDescriptor descriptor) {
     descriptor
-            .onlyOnLanguage(ErlangLanguage.KEY)
-            .name("Erlang Dialyzer Sensor");
+            .onlyOnLanguages(ErlangLanguage.KEY, ELIXIR_LANGUAGE_KEY)
+            .name("Erlang/Elixir Dialyzer Sensor");
   }
 
   @Override
